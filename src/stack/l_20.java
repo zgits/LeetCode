@@ -3,11 +3,12 @@ package stack;
 import java.util.Stack;
 
 /**
- * @Description: LeetCode上的第20题，有效的括号
+ * @Description: LeetCode上栈的第20题，有效的括号
  * @Author: 幻夜~星辰
  * @Date: Created in 2019/3/20 13:19.
  */
 public class l_20 {
+//    第一种解决方法
     public boolean isValid(String s) {
         Stack<Character> stack=new Stack<>();
         char[] chars=s.toCharArray();
@@ -26,4 +27,5 @@ public class l_20 {
     private boolean isSys(char c1,char c2){
         return (c1=='('&&c2==')')||(c1=='['&&c2==']')||(c1=='{'&&c2=='}');
     }
+//    end
 }
