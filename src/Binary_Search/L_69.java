@@ -8,7 +8,7 @@ package Binary_Search;
 public class L_69 {
     public static int mySqrt(int x) {
 //        未完成
-        int left=1,right=((x>>1)+1);;
+        int left=1,right=((x>>1)+1);
         while (left<=right) {
             int mid=left+((right-left)>>1);
             if (mid>(Integer.MAX_VALUE/mid)) {
