@@ -8,13 +8,12 @@ package tree;
 public class L_101 {
     public boolean isSymmetric(TreeNode root) {
 
-//        未通过
-        if(root==null){
-            return true;
-        }
-        if(root.left.left.val==root.right.right.val){
-            return true;
-        }
-        return isSymmetric(root.left)&&isSymmetric(root.right);
+        return isMirror(root,root);
+    }
+
+    public boolean isMirror(TreeNode t1,TreeNode t2){
+        if(t1==null&&t2==null) return true;
+        if(t1==null||t2==null) return false;
+        return (t1.val==t2.val)&&isMirror(t1.left,t2.right)&&isMirror(t1.right,t2.left);
     }
 }
